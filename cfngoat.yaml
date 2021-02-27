@@ -609,6 +609,8 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-financials"
+      PublicAccessBlockConfiguration:
+        RestrictPublicBuckets: True
 
   OperationsBucket:
     # not encrypted, no access logs
